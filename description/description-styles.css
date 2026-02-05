@@ -1,0 +1,289 @@
+/* Общие стили страницы */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Стили для блока выбора категории */
+.category-selection {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.category-selection h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.category-selection button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.category-selection button:hover {
+    background-color: #45a049;
+}
+
+/* Контейнер для продуктов */
+.products {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Заголовок категории */
+#categoryTitle {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Каждый продукт */
+.product {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.product.active {
+    transform: scale(1.02);
+}
+
+/* Шапка продукта */
+.product-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.product-header img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-right: 15px;
+}
+
+.product-text h3 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.product-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Скрытая часть продукта */
+.product-details {
+    display: none;
+    padding: 0 15px 15px 15px;
+}
+
+.product.active .product-details {
+    display: block;
+}
+
+/* Кнопки переключения языков */
+.lang-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.lang-buttons button {
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #eee;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.lang-buttons button:hover {
+    background: #ddd;
+}
+
+.lang-buttons button.active-lang {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Стили для списка описания */
+.description-list {
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+}
+
+.description-list li {
+    margin-bottom: 8px;
+}
+
+/* Адаптация для экранов до 600px (мобильные устройства) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Заголовки */
+    .category-selection h1 {
+        font-size: 20px;
+    }
+
+    #categoryTitle {
+        font-size: 20px;
+    }
+
+    /* Кнопки категорий */
+    .category-selection button {
+        padding: 10px 16px;
+        font-size: 14px;
+        margin: 5px;
+    }
+
+    /* Контейнер продуктов */
+    .products {
+        max-width: 100%;
+        padding: 0 5px;
+    }
+
+    /* Продукты */
+    .product {
+        margin-bottom: 15px;
+    }
+
+    .product-header img {
+        width: 60px;
+        height: 60px;
+        margin-right: 10px;
+    }
+
+    .product-text h3 {
+        font-size: 16px;
+    }
+
+    .product-text p {
+        font-size: 13px;
+    }
+
+    /* Кнопки переключения языков */
+    .lang-buttons {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .lang-buttons button {
+        padding: 5px 8px;
+        font-size: 12px;
+    }
+
+    /* Список описания */
+    .description-list {
+        padding-left: 15px;
+    }
+
+    .description-list li {
+        font-size: 13px;
+    }
+}
+
+/* ===================== АДАПТАЦИЯ ДЛЯ НОУТБУКОВ ===================== */
+@media (max-width: 1024px) {
+    .container {
+        width: 85%;
+        padding: 30px;
+        gap: 25px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .buttons {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+
+    .image {
+        width: 70%;
+    }
+
+    .final-screen h1 {
+        font-size: 28px;
+    }
+
+    .final-screen p {
+        font-size: 16px;
+    }
+
+    .final-btn {
+        padding: 12px 28px;
+        font-size: 16px;
+    }
+}
+
+/* ===================== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ===================== */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 95%;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .image {
+        width: 90%;
+    }
+
+    .final-screen h1 {
+        font-size: 24px;
+    }
+
+    .final-screen p {
+        font-size: 14px;
+    }
+
+    .final-btn {
+        width: 80%;
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
